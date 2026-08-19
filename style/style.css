@@ -26,18 +26,34 @@ h2 {
   height: 40px;
 }
 .highligts p {
-    color: rgba(84, 55, 13, 1);
+  color: rgba(84, 55, 13, 1);
   font-size: 1.5rem;
   font-family: "Palanquin";
   font-style: normal;
   font-weight: 500;
 }
-.highligts div {
+.highligts-head {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   text-align: center;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 24px;
+  padding-bottom: 32px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  max-width: 1220px;
+  height: 550px;
+  background-color: aqua;
+}
+.slider-wrapper {
+  display: flex;
+
 }
 
 footer {

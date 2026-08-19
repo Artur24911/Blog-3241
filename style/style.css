@@ -70,6 +70,27 @@ h2 {
   width: calc(100% / 3);
   height: 100%;
 }
+.slider-wrapper-txt{
+    width: 80%;
+    height: auto;
+    text-align: left;
+    margin-top: 54px;
+    margin-left: 38px;
+    padding: 16px 24px;
+    background-color: rgba(255, 255, 255, 0.304);
+}
+.slider-wrapper-txt h3 {
+  color: white;
+  font-family: "Palanquin Dark";
+  font-weight: 600;
+  font-size: 3rem;
+}
+.slider-wrapper-txt p {
+  color: white;
+  font-family: "Palanquin";
+  font-weight: 400;
+  font-size: 1.75rem;
+}
 
 .element-Artur {
   background-color: blue;
@@ -78,16 +99,16 @@ h2 {
   background-color: crimson;
 }
 .element-Onur {
-  background-color: chartreuse;
+  background-color: rgb(65, 113, 17);
 }
-.slider input[value="Artur"]:checked~.slider-wrapper{
-    transform: translateX(calc(100% / 3))
+.slider input[value="Artur"]:checked ~ .slider-wrapper {
+  transform: translateX(calc(100% / 3));
 }
-.slider input[value="David"]:checked~.slider-wrapper{
-    transform: translateX(0);
+.slider input[value="David"]:checked ~ .slider-wrapper {
+  transform: translateX(0);
 }
-.slider input[value="Onur"]:checked~.slider-wrapper{
-    transform: translateX(calc(-100% / 3));
+.slider input[value="Onur"]:checked ~ .slider-wrapper {
+  transform: translateX(calc(-100% / 3));
 }
 footer {
   height: auto;

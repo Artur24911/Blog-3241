@@ -71,6 +71,8 @@ h2 {
   height: 100%;
 }
 .slider-wrapper-txt{
+    display: flex;
+    flex-direction: column;
     width: 80%;
     height: auto;
     text-align: left;
@@ -78,6 +80,7 @@ h2 {
     margin-left: 38px;
     padding: 16px 24px;
     background-color: rgba(255, 255, 255, 0.304);
+    text-decoration: none;
 }
 .slider-wrapper-txt h3 {
   color: white;

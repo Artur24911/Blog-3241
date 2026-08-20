@@ -79,7 +79,7 @@ h2 {
     margin-top: 54px;
     margin-left: 38px;
     padding: 16px 24px;
-    background-color: rgba(255, 255, 255, 0.304);
+    background-color: rgba(255, 255, 255, 0.39);
     text-decoration: none;
 }
 .slider-wrapper-txt h3 {
@@ -96,13 +96,20 @@ h2 {
 }
 
 .element-Artur {
-  background-color: blue;
+  background:url(../assets/img/header\ photo\ \(1\).webp);
+  background-size: contain;
+  background-repeat: round;
+  
 }
 .element-David {
-  background-color: crimson;
+  background: url(../assets/img/header\ photo\ \(2\).webp);
+  background-size: contain;
+  background-repeat: round;
 }
 .element-Onur {
-  background-color: rgb(65, 113, 17);
+  background: url(../assets/img/header\ photo\ \(3\).webp);
+  background-size: contain;
+  background-repeat: round;
 }
 .slider input[value="Artur"]:checked ~ .slider-wrapper {
   transform: translateX(calc(100% / 3));

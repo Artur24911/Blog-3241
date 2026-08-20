@@ -47,18 +47,18 @@ h2 {
 }
 
 .slider {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    gap: 24px;
-    margin-top: 120px;
-    margin-bottom: 120px;
-    max-width: 1220px;
-    height: 550px;
-    background-color: aqua;
-    border-top-right-radius: 100px;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 24px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  max-width: 1220px;
+  height: 550px;
+  background-color: white;
+  border-top-right-radius: 100px;
+  overflow: hidden;
 }
 
 .slider input {
@@ -89,7 +89,7 @@ h2 {
     margin-top: 54px;
     margin-left: 38px;
     padding: 16px 24px;
-    background-color: rgba(255, 255, 255, 0.304);
+    background-color: rgba(255, 255, 255, 0.39);
     text-decoration: none;
 }
 
@@ -101,22 +101,31 @@ h2 {
 }
 
 .slider-wrapper-txt p {
-    color: white;
-    font-family: "Palanquin";
-    font-weight: 400;
-    font-size: 1.75rem;
+  color: white;
+  font-family: "Palanquin";
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: 0%;
+  line-height: 110%;
 }
 
 .element-Artur {
-    background-color: blue;
+  background:url(../assets/img/header\ photo\ \(1\).webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 .element-David {
-    background-color: crimson;
+  background: url(../assets/img/header\ photo\ \(2\).webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .element-Onur {
-    background-color: rgb(65, 113, 17);
+  background: url(../assets/img/header\ photo\ \(3\).webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .slider input[value="Artur"]:checked~.slider-wrapper {

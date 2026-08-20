@@ -168,6 +168,7 @@ h2 {
     font-family: 'Palanquin';
     font-weight: 500;
     font-size: 1.5rem;
+    color: rgba(84, 55, 13, 1);
     line-height: 110%;
     letter-spacing: 0%;
 }
@@ -177,15 +178,17 @@ form {
 
     display: flex;
     gap: 1rem;
-    flex-direction: colum;
+    flex-direction: column;
+
+    color: rgba(84, 55, 13, 1);
 }
 
 .contact-main {
     width: 100%;
 
     display: flex;
-    gap: 4rem;  
-    flex-direction: column; 
+    gap: 4rem;
+    flex-direction: column;
 }
 
 .contact-info {
@@ -200,23 +203,138 @@ form {
     gap: 1rem;
     flex-direction: column;
 
-    border-bottom: 1px solid black;
+    border-bottom: solid 1px black;
 }
 
-.form-input{
-    border: none;
+.contact-info .contact-details {
+    width: 33rem;
+}
+
+form label {
+    font-family: 'Palanquin';
+    font-weight: 500;
+    font-size: 1.5rem;
     line-height: 120%;
+}
+
+/* Mark: Roboto Mono wirklich richtiges Font? */
+.form-input,
+.form-textarea {
+    margin-bottom: 1rem;
+    border: none;
+
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(78, 164, 135, 1);
+    line-height: 120%;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
 }
 
 .contact-send {
     display: flex;
     gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.privacy {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.privacy .checkbox {
+    appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+
+    cursor: pointer;
+    border-radius: 0.2rem;
+    border: 2px solid black;
+}
+
+.privacy .checkbox:hover {
+    background-color: rgba(241, 201, 83, 1);
+}
+
+.privacy .checkbox:checked {
+    border-color: rgba(78, 164, 135, 1);
+}
+
+.privacy .checkbox:checked::after {
+    content: "";
+    
+    height: 100%;
+    width: 100%;
+    
+    display: block;
+    
+    background-image: url("../assets/icons/checked_form.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(78, 164, 135, 1);
+
+}
+
+.privacy label {
+    font-family: 'Palanquin';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+
+}
+
+.privacy span {
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.privacy a {
+    text-decoration: none;
+
+    letter-spacing: -3%;
+    color: rgba(78, 164, 135, 1);
+}
+
+.privacy a:hover {
+    transform: scale(1.06);
+    transform-origin: left center
+}
+
+.contact-button {
+    height: 3rem;
+    padding: 0 1.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+
+    border: 1px solid rgba(48, 48, 48, 0.5);
+    border-radius: 2.5rem;
+    background-color: white;
+
+      cursor: pointer;
+}
+
+.contact-button p {
+    font-family: 'Arima';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: 5%;
+
+    color: rgba(115, 115, 115, 1);
 }
 
 footer {
     height: auto;
     width: 100%;
-    padding: 60px 120px;
+    padding: 3.75rem 7.5rem;
 
     display: flex;
     align-items: center;

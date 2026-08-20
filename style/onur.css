@@ -78,11 +78,10 @@ h2 {
 }
 .headline-info {
   background-color: rgba(78, 164, 135, 0.2);
- max-width: 280px;
+  max-width: 280px;
   border-radius: 30px;
   text-align: center;
   padding: 16px;
-  
 }
 
 .headline-info img {
@@ -108,8 +107,21 @@ h2 {
 }
 .info-text {
   color: rgba(84, 55, 13, 1);
-    font-family: 'Palanquin';
+  font-family: "Palanquin";
   font-weight: 400;
   font-size: 1rem;
   line-height: 120%;
+}
+
+h3 {
+  color: rgba(84, 55, 13, 1);
+  font-size: 2rem;
+  font-family: "Arima";
+  font-weight: 600;
+}
+.carousel{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 50px;
 }

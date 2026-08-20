@@ -47,18 +47,18 @@ h2 {
 }
 
 .slider {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  gap: 24px;
-  margin-top: 120px;
-  margin-bottom: 120px;
-  max-width: 1220px;
-  height: 550px;
-  background-color: white;
-  border-top-right-radius: 100px;
-  overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 24px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    max-width: 1220px;
+    height: 550px;
+    background-color: white;
+    border-top-right-radius: 100px;
+    overflow: hidden;
 }
 
 .slider input {
@@ -101,31 +101,31 @@ h2 {
 }
 
 .slider-wrapper-txt p {
-  color: white;
-  font-family: "Palanquin";
-  font-weight: 400;
-  font-size: 1.75rem;
-  letter-spacing: 0%;
-  line-height: 110%;
+    color: white;
+    font-family: "Palanquin";
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: 0%;
+    line-height: 110%;
 }
 
 .element-Artur {
-  background:url(../assets/img/header\ photo\ \(1\).webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  
+    background: url(../assets/img/header\ photo\ \(1\).webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 .element-David {
-  background: url(../assets/img/header\ photo\ \(2\).webp);
-  background-size: cover;
-  background-repeat: no-repeat;
+    background: url(../assets/img/header\ photo\ \(2\).webp);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .element-Onur {
-  background: url(../assets/img/header\ photo\ \(3\).webp);
-  background-size: cover;
-  background-repeat: no-repeat;
+    background: url(../assets/img/header\ photo\ \(3\).webp);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .slider input[value="Artur"]:checked~.slider-wrapper {
@@ -138,6 +138,79 @@ h2 {
 
 .slider input[value="Onur"]:checked~.slider-wrapper {
     transform: translateX(calc(-100% / 3));
+}
+
+.contact {
+    /* MARK: weite muss noch angepasst werden, fix? oder 1100 aus figma +clamp? */
+    width: 1100px;
+    display: flex;
+    gap: 3.5rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-heading {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.contact-header {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-header>p {
+    text-align: center;
+
+    font-family: 'Palanquin';
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 110%;
+    letter-spacing: 0%;
+}
+
+form {
+    width: 100%;
+
+    display: flex;
+    gap: 1rem;
+    flex-direction: colum;
+}
+
+.contact-main {
+    width: 100%;
+
+    display: flex;
+    gap: 4rem;  
+    flex-direction: column; 
+}
+
+.contact-info {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-details {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    border-bottom: 1px solid black;
+}
+
+.form-input{
+    border: none;
+    line-height: 120%;
+}
+
+.contact-send {
+    display: flex;
+    gap: 2rem;
 }
 
 footer {

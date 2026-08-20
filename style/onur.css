@@ -31,4 +31,18 @@
     nav a:hover{
         color: red;
     }
-    
+
+    .headline{
+        display: flex;
+        justify-content: center;
+        max-width: 1440px;
+        padding: 120px;
+    }
+.headline-info{
+    background-color: rgba(78, 164, 135, 0.2);
+    width: 270px;
+}
+
+    .headline-info img{
+        height: 120px;
+    }

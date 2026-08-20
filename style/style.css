@@ -49,7 +49,7 @@ h2 {
   margin-bottom: 120px;
   max-width: 1220px;
   height: 550px;
-  background-color: aqua;
+  background-color: white;
   border-top-right-radius: 100px;
   overflow: hidden;
 }
@@ -93,23 +93,25 @@ h2 {
   font-family: "Palanquin";
   font-weight: 400;
   font-size: 1.75rem;
+  letter-spacing: 0%;
+  line-height: 110%;
 }
 
 .element-Artur {
   background:url(../assets/img/header\ photo\ \(1\).webp);
-  background-size: contain;
-  background-repeat: round;
+  background-size: cover;
+  background-repeat: no-repeat;
   
 }
 .element-David {
   background: url(../assets/img/header\ photo\ \(2\).webp);
-  background-size: contain;
-  background-repeat: round;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .element-Onur {
   background: url(../assets/img/header\ photo\ \(3\).webp);
-  background-size: contain;
-  background-repeat: round;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .slider input[value="Artur"]:checked ~ .slider-wrapper {
   transform: translateX(calc(100% / 3));

@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100dvh;
+}
+
+header {
+  background-color: rgba(78, 164, 135, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+menu {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+menu img {
+  padding: 32px 100px 32px 140px;
+}
+nav {
+  display: flex;
+  gap: 72px;
+}
+nav a {
+  color: white;
+  font-family: "Arima";
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+nav a:hover {
+  color: red;
+}
+h1 {
+  color: rgba(241, 201, 83, 1);
+  font-size: 4rem;
+  font-family: "Arima";
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+h2 {
+  color: rgba(78, 164, 135, 1);
+  font-size: 2.5rem;
+  font-family: "Palanquin";
+  font-weight: 600;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  min-height: 420px;
+  margin: 0 auto;
+  padding: 65px 0 30px;
+  gap: 50px;
+}
+.headline-article {
+  display: flex;
+  flex-direction: column;
+}
+.headline-article p {
+  color: rgba(84, 55, 13, 1);
+  font-size: 2rem;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.icon {
+  display: flex;
+  justify-content: start;
+  margin-top: 40px;
+  gap: 32px;
+}
+.headline-info {
+  background-color: rgba(78, 164, 135, 0.2);
+  max-width: 280px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 16px;
+}
+
+.headline-info img {
+  height: 120px;
+  width: 120px;
+  display: block;
+  margin: 0 auto 8px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name {
+  color: rgba(84, 55, 13, 1);
+  font-size: 1.125rem;
+  font-family: "Arima";
+  font-weight: 700;
+}
+.author {
+  color: rgba(84, 55, 13, 1);
+  font-size: 1.125rem;
+  font-family: "Arima";
+  font-weight: 400;
+}
+.info-text {
+  color: rgba(84, 55, 13, 1);
+  font-family: "Palanquin";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 120%;
+}
+
+h3 {
+  color: rgba(84, 55, 13, 1);
+  font-size: 2rem;
+  font-family: "Arima";
+  font-weight: 600;
+  padding: 80px 0 80px 0;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  height: 100dvh;
+  max-width: 1330;
+}
+.carousel-wrapper {
+  height: 440px;
+  display: flex;
+}
+.carousel-wrapper img {
+  object-fit: cover;
+  width: 250px;
+  height: 440px;
+}
+
+.carousel-element {
+  z-index: 1;
+  width: 250px;
+
+  background-color: blueviolet;
+
+  box-shadow:
+    0px 5px 5px rgba(3, 7, 18, 0.04),
+    0px 19px 19px rgba(3, 7, 18, 0.08),
+    0px 42px 42px rgba(3, 7, 18, 0.12);
+
+  transform: perspective(250px) rotateY(10deg) translateX(-20px);
+  transform-origin: 50% 50%;
+  transition: all 300ms ease-in-out;
+}
+.carousel-element:hover {
+  z-index: 2;
+  transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5)
+    scaleY(1.2);
+}
+.carousel-element:hover ~ .carousel-element {
+  transform: perspective(250px) rotateY(-20deg) translateX(0px);
+}
+.text-info {
+  color: rgba(61, 61, 61, 1);
+  font-size: 1.5rem;
+  font-family: "Palanquin";
+  font-weight: 400;
+  max-width: 1200px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.txt-list {
+  color: rgba(61, 61, 61, 1);
+  font-size: 1.5rem;
+  font-family: "Palanquin";
+  font-weight: 400;
+  max-width: 1000px;
+  line-height: 120%;
+
+}
+.txt-list ol{
+    padding-left: 30px;
+    padding-top: 24px;
+}
+

@@ -7,64 +7,71 @@
 }
 
 
-.header{
+.header {
     height: 120px;
     width: 100%;
 
     display: flex;
-    background-color:  rgba(78, 164, 135, 1);
+    background-color: rgba(78, 164, 135, 1);
     padding-left: 120px;
     align-items: flex-start;
     gap: 50px;
     align-items: center;
-    
+
 }
-.header>img{
+
+.header>img {
     width: 72px;
     padding-right: 60px;
-    
+
 }
-.nav-destop{
+
+.nav-destop {
     display: flex;
-       
+
     gap: 30px;
 
 }
-.nav-box{
+
+.nav-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    
-    
+
+
 }
-.nav-box>a{
-font-size: 24px;
-    font-family: "Arima"; 
+
+.nav-box>a {
+    font-size: 24px;
+    font-family: "Arima";
     font-weight: bold;
     color: rgba(248, 245, 235, 1);
     text-decoration: none;
     padding: 0px 15px;
-    
+
 
 }
-a:visited{
-    color: rgba(241, 201, 83, 1);}
 
-.nav-box>img{
+a:visited {
+    color: rgba(241, 201, 83, 1);
+}
+
+.nav-box>img {
     position: absolute;
-    bottom: 5px;  
-    left: 50%;  
+    bottom: 5px;
+    left: 50%;
     display: none;
     transform: translateX(-50%);
 }
-.nav-box:hover>img{
+
+.nav-box:hover>img {
     display: block;
 }
 
-.icon-bar{
+.icon-bar {
     display: none;
-}    
+}
 
 main {
     display: flex;
@@ -104,11 +111,12 @@ h2 {
 }
 
 .highligts div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  text-align: center;}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
 
 
 .highligts-head {
@@ -409,14 +417,20 @@ form label {
 footer {
     height: auto;
     width: 100%;
-    padding: 3.75rem 7.5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
 
     background-color: rgba(78, 164, 135, 1);
+}
+
+.footer-content {
+    max-width: 1280px;
+    padding: 3.75rem 0;
+    margin: 0 auto;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 .footer-left {
@@ -466,64 +480,66 @@ footer {
 @media screen and (min-width: 769px) and (max-width: 1279px) {}
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    .header{
+    .header {
         display: flex;
-       
-       justify-content: center;
-       padding-top: 10px;
+
+        justify-content: center;
+        padding-top: 10px;
     }
-    
-    .nav-destop{
+
+    .nav-destop {
         display: none;
     }
-    .icon-bar{
+
+    .icon-bar {
         display: block;
         display: flex;
-       width: 100%;
-  background-color: rgba(241, 201, 83, 1);
-  overflow: auto;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  position: fixed;
- bottom: 0px;
+        width: 100%;
+        background-color: rgba(241, 201, 83, 1);
+        overflow: auto;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        position: fixed;
+        bottom: 0px;
         left: 0px;
-        padding: 0px 40px ;
-}
+        padding: 0px 40px;
+    }
 
-.icon-bar>img{
-    height: 34px;
-}
+    .icon-bar>img {
+        height: 34px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-       .header{
+    .header {
         display: flex;
-       
-       justify-content: center;
-       padding-top: 10px;
+
+        justify-content: center;
+        padding-top: 10px;
     }
-    
-    .nav-destop{
+
+    .nav-destop {
         display: none;
     }
-    .icon-bar{
+
+    .icon-bar {
         display: block;
         display: flex;
-       width: 100%;
-  background-color: rgba(241, 201, 83, 1);
-  overflow: auto;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  position: fixed;
- bottom: 0px;
+        width: 100%;
+        background-color: rgba(241, 201, 83, 1);
+        overflow: auto;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        position: fixed;
+        bottom: 0px;
         left: 0px;
-        padding: 0px 40px ;
-}
+        padding: 0px 40px;
+    }
 
-.icon-bar>img{
-    height: 34px;
-}
+    .icon-bar>img {
+        height: 34px;
+    }
 
 }

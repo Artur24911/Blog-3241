@@ -15,9 +15,16 @@
     background-color:  rgba(78, 164, 135, 1);
     padding-left: 120px;
     align-items: flex-start;
+    gap: 24px;
 }
 .header>img{
     width: 72px;
+    padding-right: 24px;
+}
+
+.icon-bar{
+    display: none;
+}    
 =======
   margin: 0;
   padding: 0;
@@ -71,7 +78,7 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  text-align: center;
+  text-align: center;}
 >>>>>>> 193d9f60a0cbea29a9d3ffeb5bbad00cc0afcbc9
 =======
 

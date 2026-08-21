@@ -222,32 +222,33 @@ h2 {
 }
 
 /*FAQ*/
-.faq{
+.faq {
     display: flex;
     flex-direction: column;
 }
 
-.faq-headline{
-    display: flex; 
+.faq-headline {
+    display: flex;
     align-items: center;
-    
-   
-    
-}
-.details > summary {
-  padding: 4px;
-  width: 100%;
-  background-color: rgba(241, 201, 83, 1);
-  border: none;
-  box-shadow: 1px 1px 2px #bbbbbb;
-  cursor: pointer;
+
+
+
 }
 
-.details > p {
-  background-color: rgba(241, 201, 83, 1);
-  padding: 4px;
-  margin: 0;
-  box-shadow: 1px 1px 2px #bbbbbb;
+.details>summary {
+    padding: 4px;
+    width: 100%;
+    background-color: rgba(241, 201, 83, 1);
+    border: none;
+    box-shadow: 1px 1px 2px #bbbbbb;
+    cursor: pointer;
+}
+
+.details>p {
+    background-color: rgba(241, 201, 83, 1);
+    padding: 4px;
+    margin: 0;
+    box-shadow: 1px 1px 2px #bbbbbb;
 }
 
 .contact {
@@ -446,20 +447,14 @@ form label {
 footer {
     height: auto;
     width: 100%;
-
-    background-color: rgba(78, 164, 135, 1);
-}
-
-.footer-content {
-    max-width: 1280px;
-    padding: 3.75rem 0;
-    margin: 0 auto;
+    padding: 3.75rem 3.75rem;
 
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: space-between;
 
+    background-color: rgba(78, 164, 135, 1);
 }
 
 .footer-left {

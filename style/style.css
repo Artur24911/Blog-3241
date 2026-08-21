@@ -229,7 +229,6 @@ h2 {
     padding-bottom: 120px;
 }
 
-<<<<<<< HEAD
 
 .faq-headline{
     display: flex; 
@@ -259,30 +258,6 @@ h2 {
     font-size: 16px;
     color: black;
   
-=======
-.faq-headline {
-    display: flex;
-    align-items: center;
-
-
-
-}
-
-.details>summary {
-    padding: 4px;
-    width: 100%;
-    background-color: rgba(241, 201, 83, 1);
-    border: none;
-    box-shadow: 1px 1px 2px #bbbbbb;
-    cursor: pointer;
-}
-
-.details>p {
-    background-color: rgba(241, 201, 83, 1);
-    padding: 4px;
-    margin: 0;
-    box-shadow: 1px 1px 2px #bbbbbb;
->>>>>>> 320885186df7f6283693996b8d795271e4a20d33
 }
 
 .contact {

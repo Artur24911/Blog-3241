@@ -213,6 +213,35 @@ h2 {
     transform: translateX(calc(-100% / 3));
 }
 
+/*FAQ*/
+.faq{
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-headline{
+    display: flex; 
+    align-items: center;
+    
+   
+    
+}
+.details > summary {
+  padding: 4px;
+  width: 100%;
+  background-color: rgba(241, 201, 83, 1);
+  border: none;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  cursor: pointer;
+}
+
+.details > p {
+  background-color: rgba(241, 201, 83, 1);
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+
 .contact {
     /* MARK: weite muss noch angepasst werden, fix? oder 1100 aus figma +clamp? */
     width: 1100px;

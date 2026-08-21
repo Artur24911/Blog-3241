@@ -193,12 +193,16 @@ h3 {
   position: relative;
   height: 100vh;
   padding-bottom: 80px;
+  
+  padding-top: 80px;
 }
 
 .pro-tipp-icon {
   position: absolute;
   top: -70px;
   left: -80px;
+  
+  padding-top: 80px;
 }
 .pro-tipp-list {
   background-color: rgba(78, 164, 135, 0.2);
@@ -208,7 +212,7 @@ h3 {
   display: flex;
   align-items: center;
    position: relative;
-   padding: auto;
+   padding: 24px 16px 24px 45px;
 }
 
 .pro-tipp-list li {

@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,69 +17,112 @@
 }
 .header>img{
     width: 72px;
+=======
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 120px;
+}
+.highligts {
+  max-width: 1220px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+h2 {
+  color: rgba(78, 164, 135, 1);
+  font-size: 3.25rem;
+  font-family: "Arima";
+  font-weight: 700;
+}
+
+.highligts div img {
+  width: 40px;
+  height: 40px;
+}
+.highligts p {
+    color: rgba(84, 55, 13, 1);
+  font-size: 1.5rem;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 500;
+}
+.highligts div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+>>>>>>> 193d9f60a0cbea29a9d3ffeb5bbad00cc0afcbc9
 }
 
 footer {
-    height: auto;
-    width: 100%;
-    padding: 60px 120px;
+  height: auto;
+  width: 100%;
+  padding: 60px 120px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 
-    background-color: rgba(78, 164, 135, 1);
+  background-color: rgba(78, 164, 135, 1);
 }
 
 .footer-left {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
 
-    display: flex;
-    align-items: center;
-    gap: 4.5rem;
-
-    font-family: 'Palanquin';
-    font-weight: 400;
-    font-size: 1rem;
-    color: white;
-
+  font-family: "Palanquin";
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
 }
 
 .footer-left img {
-    height: 24px;
-    width: 24px;
+  height: 24px;
+  width: 24px;
 }
 
 .footer-left a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .copyright {
-    display: flex;
-    gap: 0.25rem;
-    align-items: center;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
 }
 
 .footer-right {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .footer-right img {
-    height: 32px;
-    width: 32px;
+  height: 32px;
+  width: 32px;
 }
 
 .footer-right .youtube-img {
-    height: 32px;
-    width: 44px;
+  height: 32px;
+  width: 44px;
 }
 
-@media screen and (min-width: 1280px) {}
+@media screen and (min-width: 1280px) {
+}
 
-@media screen and (min-width: 769px) and (max-width: 1279px) {}
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+}
 
-@media screen and (min-width:481px) and (max-width: 768px) {}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+}

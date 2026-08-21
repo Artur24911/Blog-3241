@@ -125,7 +125,7 @@ h3 {
   font-size: 2rem;
   font-family: "Arima";
   font-weight: 600;
-  padding: 80px 0 64px 0;
+  padding: 80px 0 80px 0;
 }
 .carousel {
   display: flex;
@@ -137,9 +137,14 @@ h3 {
   height: 440px;
   display: flex;
 }
+.carousel-wrapper img {
+  object-fit: cover;
+  width: 250px;
+  height: 440px;
+}
 
 .carousel-element {
-    z-index: 1;
+  z-index: 1;
   width: 250px;
 
   background-color: blueviolet;
@@ -153,7 +158,34 @@ h3 {
   transform-origin: 50% 50%;
   transition: all 300ms ease-in-out;
 }
-.carousel-element:hover{
-    z-index: 2;
-    transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
+.carousel-element:hover {
+  z-index: 2;
+  transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5)
+    scaleY(1.2);
 }
+.carousel-element:hover ~ .carousel-element {
+  transform: perspective(250px) rotateY(-20deg) translateX(0px);
+}
+.text-info {
+  color: rgba(61, 61, 61, 1);
+  font-size: 1.5rem;
+  font-family: "Palanquin";
+  font-weight: 400;
+  max-width: 1200px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.txt-list {
+  color: rgba(61, 61, 61, 1);
+  font-size: 1.5rem;
+  font-family: "Palanquin";
+  font-weight: 400;
+  max-width: 1000px;
+  line-height: 120%;
+
+}
+.txt-list ol{
+    padding-left: 30px;
+    padding-top: 24px;
+}
+

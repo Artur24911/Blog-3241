@@ -109,11 +109,11 @@ h2 {
   letter-spacing: 0%;
 }
 
-.highligts div {
+.highligts > div {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 8px;
+    align-items: end;
+    gap: 20px;
     text-align: center;
 }
 

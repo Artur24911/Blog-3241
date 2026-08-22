@@ -43,8 +43,8 @@
 }
 
 .nav-box>a {
-    font-size: 24px;
     font-family: "Arima";
+    font-size: 24px;
     font-weight: bold;
     color: rgba(248, 245, 235, 1);
     text-decoration: none;
@@ -75,11 +75,19 @@ a:visited {
 
 /* Mark: Main */
 
-main {
-    width: 1200px;
+main>article {
+    max-width: 1200px;
     height: auto;
     margin: 0 auto;
+    padding-top: 5rem;
+
+    display: flex;
+    gap: 5.5rem;
+    flex-direction: column;
+    align-items: center;
 }
+
+
 
 /* Mark: Landing-section */
 
@@ -204,13 +212,16 @@ aside img {
     color: rgba(84, 55, 13, 1);
 }
 
-.author-info>h3 {
+.author-info>h4 {
+    text-align: center;
+
     font-family: 'Arima';
     font-weight: 700;
     font-size: 1.125rem;
 }
 
 .author-info>p {
+    text-align: center;
     font-family: 'Arima';
     font-weight: 400;
     font-size: 1.125rem;
@@ -221,6 +232,228 @@ aside img {
     font-weight: 400;
     font-size: 1rem;
 }
+
+/* Mark: Caroussel */
+
+.destinations {
+    max-width: 1100px;
+
+    display: flex;
+    gap: 64px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destinations h2 {
+    font-family: "Arima";
+    font-weight: 600;
+    font-size: 2rem;
+
+    color: rgba(84, 55, 13, 1);
+}
+
+.carousel {
+    width: 1300px;
+    height: 440px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-element {
+    display: flex;
+
+    height: 100%;
+    width: 300px;
+    margin-left: -100px;
+}
+
+.carousel-element:first-of-type {
+    margin-left: 0;
+}
+
+.carousel-element img {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 16px;
+    box-shadow: -0px 0px 1px rgba(0, 0, 0, 0.25),
+        -9px 5px 20px rgba(0, 0, 0, 0.25);
+
+
+    transform: perspective(1000px) rotateY(20deg) scaleX(1.183);
+    transform-origin: 0%;
+    transition: all 250ms ease-in-out;
+}
+
+.carousel-element img:hover {
+    z-index: 2;
+    transform: perspective(1000px) rotateY(0deg) scaleX(1);
+}
+
+.carousel-element:has(~ .carousel-element:hover) img {
+    transform: perspective(1000px) rotateY(20deg) translateX(-100px) scaleX(1);
+}
+
+.carousel:has(.carousel-element img:hover) .carousel-element:hover~.carousel-element img {
+    transform: perspective(1000px) rotateY(-20deg) translateX(100px) translateY(-3px) scaleX(1);
+    transform-origin: right;
+}
+
+.carousel-element:last-of-type img {
+    object-position: 60%;
+}
+
+/* Mark: Body P */
+
+.paragraph {
+    font-family: 'Palanquin';
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: rgba(61, 61, 61, 1);
+}
+
+/* Mark: Content */
+
+.beach-features {
+    width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.beach-features h3,
+ol {
+    font-family: 'Palanquin';
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    color: rgba(61, 61, 61, 1);
+}
+
+.beach-features ol {
+    padding: 0 2rem;
+}
+
+
+.tipps {
+    width: 1130px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.banner {
+    align-self: flex-start;
+    height: 4.125rem;
+    width: 12.25rem;
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: rgba(78, 164, 135, 1);
+    rotate: -13.67deg;
+    transform-origin: top right;
+    color: rgba(241, 201, 83, 1);
+}
+
+.banner img {
+    rotate: 13deg;
+}
+
+.banner p {
+    font-family: 'Palanquin';
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.list-box {
+    width: 100%;
+    max-width: 1083px;
+    padding: 26px 16px 24px 16px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 30px;
+    background-color: rgba(78, 164, 135, 0.2);
+}
+
+.list-box ol {
+    padding-left: 2.25rem;
+    font-family: 'Palanquin';
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    color: rgba(61, 61, 61, 1);
+}
+
+/* Mark: Share */
+
+.share {
+    width: 30.75rem;
+    position: relative;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.share>p {
+    text-align: center;
+    font-family: "Arima";
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    color: rgba(84, 55, 13, 1);
+}
+
+.share-button {
+    height: 48px;
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 0 1.5rem;
+
+    border: none;
+    border-radius: 40px;
+
+    font-family: "Arima";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgba(241, 201, 83, 1);
+    background-color: rgba(78, 164, 135, 1);
+
+    letter-spacing: 5%;
+}
+
+.share-button img {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.share >img {
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    
+
+    border: 3px;
+    height: 115px;
+    width: 90px;
+}
+
+.share-button:hover{
+    cursor: pointer;
+}
+
 
 /* Mark: Footer */
 

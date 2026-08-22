@@ -238,7 +238,9 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 120px;
+    width: 100%;
+    max-width: 1200px;
+  
 }
 
 
@@ -246,29 +248,44 @@ h2 {
     display: flex; 
     align-items: center;
     gap: 1.5rem;
+    padding-bottom: 3.5rem;
 }
-.details > summary {
-  padding: 4px;
-  width: 1200px;
-  background-color: rgba(241, 201, 83, 1);
+
+details{
+    background-color:rgba(241, 201, 83, 1) ;
+    border-radius: 12px;
+    padding: 5px 5px;
+    border: none;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 16px;
+    
+}
+
+details > summary {
+  padding:10px;
+  
   border: none;
-  box-shadow: 1px 1px 2px #bbbbbb;
+  
   cursor: pointer;
     font-family: "Palanquin";
     font-size: 24px;
     font-weight: bold;
     color: black;
-    border-radius: 12px;
+
+    
 }
 
-.details > p {
-  background-color: rgba(241, 201, 83, 1);
-  padding: 4px;
-  margin: 0;
+details > p {
+  background-color: white;
+ 
+ border: none;
+  margin: 10px;
   box-shadow: 1px 1px 2px #bbbbbb;
    font-family: "Palanquin";
     font-size: 16px;
     color: black;
+    
   
 }
 

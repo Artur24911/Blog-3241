@@ -243,12 +243,129 @@ h3 {
   position: relative;
   padding: 24px 16px 24px 45px;
 }
-
+.pro-tipp-list > ol > li > a {
+  text-decoration: none;
+  color: rgba(78, 164, 135, 1);
+  font-family: "Palanquin";
+  font-style: bold;
+  font-weight: 700;
+}
 .pro-tipp-list li {
   font-size: 1.5rem;
   font-family: "Palanquin";
   font-weight: 400;
   line-height: 120%;
+}
+
+.pro-tipp-txt {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto 80px;
+  color: rgba(61, 61, 61, 1);
+  font-size: 1.5rem;
+  font-family: "Palanquin";
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.share-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto 80px;
+}
+.share-text {
+  color: rgba(84, 55, 13, 1);
+  font-family: "Arima";
+  font-weight: 500;
+  line-height: 120%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.share-section {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  position: relative;
+  gap: 160px;
+}
+
+.share-section > img {
+  display: block;
+}
+.share-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 150px;
+  top: 60px;
+  width: 100%;
+}
+
+.button-1 {
+  display: flex;
+  color: rgba(241, 201, 83, 1);
+  font-family: "Arima";
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 150px;
+  height: 48px;
+  background-color: rgba(78, 164, 135, 1);
+  border-radius: 40px;
+  gap: 18px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+}
+/* .button-2 {
+  display: flex;
+  color: rgba(241, 201, 83, 1);
+  font-family: "Arima";
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 120px;
+  height: 48px;
+  background-color: rgba(78, 164, 135, 1);
+  border-radius: 40px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+} */
+
+.button-1:active {
+  transform: rotateX(200px);
+}
+.share-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  position: absolute;
+  left: -130px;
+}
+.share-menu > img {
+  width: 32px;
+  height: 32px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Arima";
+  font-weight: 600;
+  font-size: 1rem;
+}
+.links a {
+  color: rgba(78, 164, 135, 1);
 }
 footer {
   height: auto;

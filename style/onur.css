@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: center;
 }
-.header-wrapper{
+.header-wrapper {
   display: flex;
   width: 100%;
   max-width: 1440px;
@@ -31,20 +31,41 @@ menu {
 menu img {
   padding: 32px 100px 32px 140px;
 }
-nav {
+.nav-bar {
   display: flex;
   gap: 72px;
 }
-nav a {
+
+.nav-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.nav-box a {
   color: white;
   font-family: "Arima";
   font-weight: 700;
   font-size: 1.5rem;
   text-decoration: none;
 }
-nav a:hover {
-  color: red;
+
+a:visited {
+  color: rgba(241, 201, 83, 1);
 }
+
+.nav-box > img {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  display: none;
+  transform: translateX(-55%) translateY(50%);
+}
+.nav-box:hover > img {
+  display: block;
+}
+
 h1 {
   color: rgba(241, 201, 83, 1);
   font-size: 4rem;
@@ -132,15 +153,14 @@ h3 {
   font-family: "Arima";
   font-weight: 600;
 }
-.txt{
+.txt {
   display: flex;
-   padding: 80px 0 80px 0;
+  padding: 80px 0 80px 0;
 }
 .carousel {
   display: flex;
   justify-content: center;
   height: 100dvh;
-
 }
 .carousel-wrapper {
   height: 400px;

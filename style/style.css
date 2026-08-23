@@ -540,7 +540,7 @@ footer {
   width: 44px;
 }
 
-@media screen and (min-width: 1280px) {
+/* @media screen and (min-width: 1280px) {
 .landing-section{
 padding: 0px max(120px, calc(50% - 720px));
 }
@@ -556,7 +556,7 @@ padding: 0px max(120px, calc(50% - 720px));
 .footer-content{
 padding: 0px max(120px, calc(50% - 720px));
 }
-}
+} */
 
 @media screen and (min-width: 769px) and (max-width: 1279px) {
 }
@@ -564,7 +564,7 @@ padding: 0px max(120px, calc(50% - 720px));
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .header {
         display: flex;
-
+      
         justify-content: center;
         padding-top: 10px;
     }
@@ -574,6 +574,7 @@ padding: 0px max(120px, calc(50% - 720px));
     }
 
     .icon-bar {
+      z-index: 3;
         display: block;
         display: flex;
         width: 100%;

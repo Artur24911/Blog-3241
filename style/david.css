@@ -93,14 +93,15 @@ main>article {
 
 .landing-section {
     width: 100%;
-    min-height: 24.5rem;
-    height: 100%;
+    height: 24.5rem;
 
     display: flex;
+    justify-content: space-between;
     gap: 1rem;
 }
 
 .intro {
+    height: 100%;
     width: 100%;
     max-width: 56.25rem;
 
@@ -108,6 +109,7 @@ main>article {
     display: flex;
     gap: 2.5rem;
     flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -262,7 +264,8 @@ aside img {
 }
 
 .carousel {
-    width: 82.25rem;
+    width: 100%;
+    max-width: 82.25rem;
     height: 27.5rem;
 
     display: flex;
@@ -274,7 +277,10 @@ aside img {
 
     height: 100%;
     width: 18.75rem;
-    margin-left: -100px;
+    max-width: 100%;
+    margin-left: -6.25rem;
+
+    overflow: hidden;
 }
 
 .carousel-element:first-of-type {
@@ -303,13 +309,13 @@ aside img {
     transform: perspective(1000px) rotateY(0deg) scaleX(1);
 }
 
-.carousel-element:has(~ .carousel-element:hover) img {
-    transform: perspective(1000px) rotateY(20deg) translateX(-100px) scaleX(1);
+.carousel-element:hover~.carousel-element img {
+    transform: perspective(1000px) rotateY(-20deg) translateX(clamp(5rem, -18.207rem + 28.986vw, 6.25rem)) translateY(-3px) scaleX(1);
+    transform-origin: right;
 }
 
-.carousel:has(.carousel-element img:hover) .carousel-element:hover~.carousel-element img {
-    transform: perspective(1000px) rotateY(-20deg) translateX(100px) translateY(-3px) scaleX(1);
-    transform-origin: right;
+.carousel-element:has(~ .carousel-element:hover) img {
+    transform: perspective(1000px) rotateY(20deg) translateX(clamp(-6.25rem, 18.207rem - 28.986vw, -5rem)) scaleX(1);
 }
 
 .carousel-element:last-of-type img {
@@ -534,13 +540,25 @@ footer {
 
 @media screen and (max-width: 1280px) {
     main>article {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+        padding-left: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
+        padding-right: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
     }
 
     .banner {
         margin-bottom: 20px;
     }
+
+    .carousel-element:hover~.carousel-element img {
+        transform: perspective(1000px) rotateY(-20deg) translateY(-3px) scaleX(1);
+        transform-origin: right;
+        filter: blur(0.25rem);
+    }
+
+    .carousel-element:has(~ .carousel-element:hover) img {
+        transform: perspective(1000px) rotateY(20deg) scaleX(1);
+        filter: blur(0.25rem);
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -552,6 +570,7 @@ footer {
     .landing-section {
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
 
     aside {
@@ -574,8 +593,6 @@ footer {
 @media screen and (max-width: 480px) {
     main>article {
         gap: 2rem;
-        padding-left: clamp(0.5rem, -3.5rem + 20vw, 2.5rem);
-        padding-right: clamp(0.5rem, -3.5rem + 20vw, 2.5rem);
     }
 
     aside p {

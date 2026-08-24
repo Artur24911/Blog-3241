@@ -10,6 +10,9 @@ body {
   align-items: center;
   height: 100dvh;
 }
+section{
+  padding: 0 10px;
+}
 
 header {
   background-color: rgba(78, 164, 135, 1);
@@ -219,19 +222,33 @@ h3 {
 }
 .pro-tipp {
   display: flex;
-  position: relative;
+  max-width: 1130px;
   height: 100vh;
-  padding-bottom: 80px;
-
-  padding-top: 80px;
+  margin: 0 auto 80px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 70px;
 }
 
 .pro-tipp-icon {
-  position: absolute;
-  top: -70px;
-  left: -80px;
-
-  padding-top: 80px;
+      align-self: flex-start;
+    height: 4.125rem;
+    width: 12.25rem;
+    display: flex;
+    align-items: center;
+    transform: translateX(-50px);
+    border-radius: 10px;
+    background-color: rgba(78, 164, 135, 1);
+    rotate: -13.67deg;
+    color: rgba(241, 201, 83, 1);
+}
+.pro-tipp-icon img{
+  rotate: 13.6deg;
+}
+.pro-tipp-icon p {
+    font-family: 'Palanquin';
+    font-weight: 700;
+    font-size: 1.75rem;
 }
 .pro-tipp-list {
   background-color: rgba(78, 164, 135, 0.2);
@@ -240,7 +257,6 @@ h3 {
   border-radius: 30px;
   display: flex;
   align-items: center;
-  position: relative;
   padding: 24px 16px 24px 45px;
 }
 .pro-tipp-list > ol > li > a {
@@ -289,7 +305,6 @@ h3 {
   justify-content: left;
   width: 100%;
   position: relative;
-  gap: 160px;
 }
 
 .share-section > img {
@@ -340,9 +355,9 @@ h3 {
   border: none;
 } */
 
-.button-1:active {
+/* .button-1:active {
   transform: rotateX(200px);
-}
+} */
 .share-menu {
   display: flex;
   justify-content: center;
@@ -426,3 +441,4 @@ footer {
   height: 32px;
   width: 44px;
 }
+

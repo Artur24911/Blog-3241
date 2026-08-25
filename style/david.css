@@ -316,7 +316,7 @@ aside img {
 
     font-family: 'Palanquin';
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 0.833rem + 0.833vw, 1.5rem);
     color: rgba(61, 61, 61, 1);
 }
 
@@ -402,16 +402,22 @@ ol {
 /* Mark: Share */
 
 .share {
-    width: 30.75rem;
     position: relative;
+
+    height: 9.625rem;
+    width: 100%;
+    max-width: 30.75rem;
+
     display: flex;
-    gap: 3rem;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 .share>p {
+    position: absolute;
+    top: 0;
+
     text-align: center;
     font-family: "Arima";
     font-weight: 500;
@@ -420,7 +426,17 @@ ol {
     color: rgba(84, 55, 13, 1);
 }
 
+.share>img {
+    height: 100px;
+    width: clamp(4.375rem, 0.018rem + 14.493vw, 5rem);
+
+    align-self: flex-start;
+    border: 3px;
+}
+
 .share-button {
+    position: relative;
+
     height: 48px;
 
     display: flex;
@@ -431,36 +447,69 @@ ol {
     border: none;
     border-radius: 40px;
 
+    background-color: rgba(78, 164, 135, 1);
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 1;
+    height: 0;
+    width: 0;
+}
+
+.share-button span {
     font-family: "Arima";
     font-weight: 700;
     font-size: 1.5rem;
     color: rgba(241, 201, 83, 1);
-    background-color: rgba(78, 164, 135, 1);
 
+    text-decoration: none;
     letter-spacing: 5%;
 }
 
-.share-button img {
+.share-button-all img {
     width: 32px;
     height: 32px;
     border-radius: 6px;
 }
 
-.share>img {
+.share-button-all {
     position: absolute;
-    left: 15px;
+
+    top: 6.625rem;
     bottom: 0;
 
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+}
 
-    border: 3px;
-    height: 115px;
-    width: 90px;
+.button-extra {
+    display: none;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+.button-links {
+    display: flex;
+    gap: 0.625rem;
+    flex-direction: column;
+}
+
+.button-links a {
+    font-family: "Arima";
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: rgba(78, 164, 135, 1);
 }
 
 .share-button:hover {
     cursor: pointer;
 }
 
+.share-button-all:has(input:checked) .button-extra {
+    display: flex;
+}
 
 /* Mark: Footer */
 
@@ -623,9 +672,7 @@ footer {
 
         display: flex;
         gap: 10px;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
 
         container-type: inline-size;
         overflow: hidden;
@@ -643,74 +690,88 @@ footer {
         width: 500%;
 
         top: 1.25rem;
-
-        transition: all 0.5s ease-in-out;
     }
 
     .carousel-element {
         width: calc(65% / 5);
         margin-left: 0;
+        transition: all 1s ease-in-out;
     }
 
     .carousel-element img {
         transform: perspective(1000px) rotateY(0deg) scaleX(1);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-one"]:checked) .elements {
-        transform: perspective(1000px) translateX(calc(130%/5)) rotateY(0deg)  scaleX(1);
+        transform: perspective(1000px) translateX(calc(130%/5)) rotateY(0deg) scaleX(1);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-one"]:checked) .one~.carousel-element {
-        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg)  scaleY(0.7) scaleX(0.7);
+        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg) scaleY(0.7) scaleX(0.7);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-two"]:checked) .elements {
-        transform: perspective(1000px) translateX(calc(65%/5)) rotateY(0deg)  scaleX(1);
+        transform: perspective(1000px) translateX(calc(65%/5)) rotateY(0deg) scaleX(1);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-two"]:checked) .carousel-element:not(.two) {
-        transform: perspective(1000px) translateX(calc(65% / 5)) rotateY(45deg)  scaleY(0.7) scaleX(0.7);
+        transform: perspective(1000px) translateX(calc(65% / 5)) rotateY(45deg) scaleY(0.7) scaleX(0.7);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-two"]:checked) .two~.carousel-element {
-        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg)  scaleY(0.7) scaleX(0.7);
+        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg) scaleY(0.7) scaleX(0.7);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-three"]:checked) .elements {
-        transform: perspective(1000px)  translateX(0px) rotateY(0deg) scaleX(1);
+        transform: perspective(1000px) translateX(0px) rotateY(0deg) scaleX(1);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-three"]:checked) .carousel-element:not(.three) {
         transform: perspective(1000px) translateX(calc(65%/5)) rotateY(45deg) scaleY(0.7) scaleX(0.7);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-three"]:checked) .three~.carousel-element {
-        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg)  scaleY(0.7) scaleX(0.7);
+        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg) scaleY(0.7) scaleX(0.7);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-four"]:checked) .elements {
-        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(0deg)  scaleX(1);
+        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(0deg) scaleX(1);
+        transition: all 1s ease-in-out;
     }
 
-    .carousel-wrapper:has(input[value="slider-four"]:checked) .carousel-element:not(.four)  {
+    .carousel-wrapper:has(input[value="slider-four"]:checked) .carousel-element:not(.four) {
         transform: perspective(1000px) translateX(calc(65%/5)) rotateY(45deg) scaleY(0.7) scaleX(0.7);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-four"]:checked) .four~.carousel-element {
-        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg)  scaleY(0.7) scaleX(0.7);
+        transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg) scaleY(0.7) scaleX(0.7);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-five"]:checked) .elements {
-        transform: perspective(1000px) translateX(calc(-130%/5)) rotateY(0deg)  scaleX(1);
+        transform: perspective(1000px) translateX(calc(-130%/5)) rotateY(0deg) scaleX(1);
+        transition: all 1s ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-five"]:checked) .carousel-element:not(.five) {
         transform: perspective(1000px) translateX(calc(65%/5)) rotateY(45deg) scaleY(0.7) scaleX(0.7);
+        transition: all 1s ease-in-out;
     }
 
     .beach-features ol {
         padding-right: 0;
     }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -722,10 +783,6 @@ footer {
         padding: 0;
     }
 
-    .paragraph {
-        font-size: 1rem;
-    }
-
     .beach-features h3,
     li {
         font-size: 1rem;
@@ -735,5 +792,21 @@ footer {
         font-size: 1rem;
     }
 
+    .share>p {
+        font-size: clamp(1rem, 0rem + 5vw, 1.5rem);
+    }
+
+    share {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .share>img {
+        height: 200px;
+        width: clamp(2.5rem, -1.25rem + 18.75vw, 4.375rem);
+        rotate: 15deg;
+    }
 
 }

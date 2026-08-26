@@ -5,6 +5,9 @@
     line-height: 120%;
 }
 
+:root{
+    --main-font-size: clamp(1rem, 0.793rem + 0.884vw, 1.5rem)
+}
 /* Mark: Header */
 
 .header {
@@ -60,7 +63,9 @@ a:visited {
     position: absolute;
     bottom: 5px;
     left: 50%;
+
     display: none;
+
     transform: translateX(-50%);
 }
 
@@ -72,7 +77,7 @@ a:visited {
     display: none;
 }
 
-/* Mark: Main */
+/* Mark: Layout (html/main) */
 
 main>article {
     max-width: 75rem;
@@ -96,8 +101,8 @@ main>article {
     height: 24.5rem;
 
     display: flex;
-    justify-content: space-between;
     gap: 1rem;
+    justify-content: space-between;
 }
 
 .intro {
@@ -115,6 +120,7 @@ main>article {
 
 .intro-main {
     width: 100%;
+
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
@@ -139,26 +145,26 @@ main>article {
     font-family: 'Arima';
     font-weight: 700;
     font-size: clamp(2rem, 0.897rem + 5.517cqw, 4rem);
-
     color: rgba(241, 201, 83, 1);
 }
 
 .intro p {
+    text-wrap: wrap;
+
     font-family: 'Palanquin';
     font-weight: 400;
     font-size: clamp(1.125rem, 0.642rem + 2.414cqw, 2rem);
-
     color: rgba(84, 55, 13, 1);
-    text-wrap: wrap;
 }
 
 .intro-info {
-    max-width: 36rem;
     width: 100%;
+    max-width: 36rem;
+
     display: flex;
     gap: 0.5rem clamp(0.6rem, -0.143rem + 3.81cqw, 2rem);
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .info {
@@ -191,7 +197,6 @@ main>article {
     font-family: 'Palanquin';
     font-weight: 400;
     font-size: 1rem;
-
     color: rgba(84, 55, 13, 1);
 }
 
@@ -218,6 +223,7 @@ aside img {
     gap: 0.75rem;
     flex-direction: column;
     align-items: center;
+
     color: rgba(84, 55, 13, 1);
 }
 
@@ -231,6 +237,7 @@ aside img {
 
 .author-info>p {
     text-align: center;
+
     font-family: 'Arima';
     font-weight: 400;
     font-size: 1.125rem;
@@ -242,17 +249,17 @@ aside img {
     font-size: 1rem;
 }
 
-/* Mark: Caroussel */
+/* Mark: Carousel-Section */
 
 .destinations {
-    max-width: 68.75rem;
     width: 100%;
+    max-width: 68.75rem;
 
     display: flex;
-    /* Mark: clamp bis 2rem ca. */
     gap: 4rem;
     flex-direction: column;
     align-items: center;
+
     container-type: inline-size;
 }
 
@@ -260,7 +267,6 @@ aside img {
     font-family: "Arima";
     font-weight: 600;
     font-size: clamp(1.125rem, 0.766rem + 1.795cqw, 2rem);
-
     color: rgba(84, 55, 13, 1);
 }
 
@@ -294,7 +300,9 @@ aside img {
 }
 
 .carousel-element img {
+    position: relative;
     z-index: 1;
+
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -304,23 +312,12 @@ aside img {
     box-shadow: -0px 0px 1px rgba(0, 0, 0, 0.25),
         -9px 5px 20px rgba(0, 0, 0, 0.25);
 
-    transform: perspective(1000px) rotateY(20deg) scaleX(1.16);
     transform-origin: 0%;
+    transform: perspective(1000px) rotateY(20deg) scaleX(1.16);
     transition: all 250ms ease-in-out;
 }
 
-/* Mark: Body Paragraph */
-
-.paragraph {
-    width: 100%;
-
-    font-family: 'Palanquin';
-    font-weight: 400;
-    font-size: clamp(1rem, 0.833rem + 0.833vw, 1.5rem);
-    color: rgba(61, 61, 61, 1);
-}
-
-/* Mark: Content */
+/* Mark: Main-Content */
 
 .beach-features {
     width: 100%;
@@ -335,8 +332,7 @@ aside img {
 ol {
     font-family: 'Palanquin';
     font-weight: 400;
-    font-size: 1.5rem;
-
+    font-size: var(--main-font-size);
     color: rgba(61, 61, 61, 1);
 }
 
@@ -355,17 +351,19 @@ ol {
 }
 
 .banner {
-    align-self: flex-start;
     height: 4.125rem;
     width: 12.25rem;
+    align-self: flex-start;
+
     display: flex;
     align-items: center;
 
     border-radius: 10px;
     background-color: rgba(78, 164, 135, 1);
+    color: rgba(241, 201, 83, 1);
+
     rotate: -13.67deg;
     transform-origin: top right;
-    color: rgba(241, 201, 83, 1);
 }
 
 .banner img {
@@ -381,7 +379,7 @@ ol {
 .list-box {
     width: 100%;
     max-width: 1083px;
-    padding: 26px 16px 24px 16px;
+    padding: 1.625rem 1rem 1.5rem 1rem;
 
     display: flex;
     align-items: center;
@@ -392,14 +390,25 @@ ol {
 
 .list-box ol {
     padding-left: 2.25rem;
+
     font-family: 'Palanquin';
     font-weight: 400;
-    font-size: 1.5rem;
-
+    font-size: var(--main-font-size);
     color: rgba(61, 61, 61, 1);
 }
 
-/* Mark: Share */
+/* Mark: Paragraphs */
+
+.paragraph {
+    width: 100%;
+
+    font-family: 'Palanquin';
+    font-weight: 400;
+    font-size: var(--main-font-size);
+    color: rgba(61, 61, 61, 1);
+}
+
+/* Mark: Share-Section */
 
 .share {
     position: relative;
@@ -422,7 +431,6 @@ ol {
     font-family: "Arima";
     font-weight: 500;
     font-size: 1.5rem;
-
     color: rgba(84, 55, 13, 1);
 }
 
@@ -437,12 +445,12 @@ ol {
 .share-button {
     position: relative;
 
-    height: 48px;
+    height: 3rem;
+    padding: 0 1.5rem;
 
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
     align-items: center;
-    padding: 0 1.5rem;
 
     border: none;
     border-radius: 40px;
@@ -452,7 +460,7 @@ ol {
 
 .checkbox {
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     height: 0;
     width: 0;
 }
@@ -463,8 +471,8 @@ ol {
     font-size: 1.5rem;
     color: rgba(241, 201, 83, 1);
 
-    text-decoration: none;
     letter-spacing: 5%;
+    text-decoration: none;
 }
 
 .share-button-all img {
@@ -475,7 +483,6 @@ ol {
 
 .share-button-all {
     position: absolute;
-
     top: 6.625rem;
     bottom: 0;
 
@@ -516,26 +523,29 @@ ol {
 footer {
     height: auto;
     width: 100%;
+
     display: flex;
     justify-content: center;
+
     background-color: rgba(78, 164, 135, 1);
 }
 
 .footer-wrap {
-    display: flex;
     width: 100%;
+    max-width: 90rem;
     padding: 3.75rem 3.75rem;
 
-    gap: 10px;
+    display: flex;
+    gap: 0.625rem;
     align-items: center;
     justify-content: space-between;
-    max-width: 1440px;
+
 }
 
 .footer-left {
     display: flex;
-    align-items: center;
     gap: 4.5rem;
+    align-items: center;
 
     font-family: "Palanquin";
     font-weight: 400;
@@ -577,6 +587,7 @@ footer {
 @media screen and (min-width: 769px) {
     .carousel-element img:hover {
         transform: perspective(1000px) rotateY(0deg) scaleX(1);
+        z-index: 2;
     }
 
     .carousel-element:hover~.carousel-element img {
@@ -598,6 +609,8 @@ footer {
 
 }
 
+/* Mark: up to 1280px */
+
 @media screen and (max-width: 1280px) {
     main>article {
         padding-left: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
@@ -609,6 +622,8 @@ footer {
     }
 
 }
+
+/* Mark: 769px - 1280px */
 
 @media screen and (min-width: 769px) and (max-width: 1280px) {
     .carousel-element:hover~.carousel-element img {
@@ -623,6 +638,8 @@ footer {
     }
 }
 
+/* Mark: 769px - 1000px */
+
 @media screen and (min-width: 769px) and (max-width: 1000px) {
     .one img {
         object-position: 42% 50%;
@@ -633,6 +650,8 @@ footer {
     }
 }
 
+/* Mark: up to 768px */
+
 @media screen and (max-width: 768px) {
 
     main>article {
@@ -640,9 +659,10 @@ footer {
     }
 
     .landing-section {
+        height: 100%;
+
         display: flex;
         flex-direction: column;
-        height: 100%;
     }
 
     aside {
@@ -657,12 +677,37 @@ footer {
         padding: 0 12%;
     }
 
+    .destinations {
+        gap: 0.5rem;
+    }
+
     .inputs {
-        z-index: 2;
+        width: 11.0625rem;
         padding: 0.625rem;
 
         display: flex;
         gap: 0.5rem;
+    }
+
+    .inputs input[type="radio"] {
+        appearance: none;
+
+        height: 1.375rem;
+        width: 1.375rem;
+
+        cursor: pointer;
+
+        border-radius: 50%;
+        background-color: rgba(78, 164, 135, 0.3);
+
+        transition: 350ms ease-in-out;
+    }
+
+    .inputs input[type="radio"]:checked {
+        border-radius: 50px;
+        background-color: rgba(78, 164, 135, 1);
+
+        flex-grow: 1.45;
     }
 
     .carousel-wrapper {
@@ -671,7 +716,7 @@ footer {
         width: 100%;
 
         display: flex;
-        gap: 10px;
+        gap: 0.625rem;
         justify-content: center;
 
         container-type: inline-size;
@@ -684,88 +729,89 @@ footer {
     }
 
     .elements {
-        position: absolute;
         height: 100%;
         max-height: 18.25rem;
         width: 500%;
 
+        position: absolute;
         top: 1.25rem;
     }
 
     .carousel-element {
         width: calc(65% / 5);
         margin-left: 0;
-        transition: all 1s ease-in-out;
+
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-element img {
         transform: perspective(1000px) rotateY(0deg) scaleX(1);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-one"]:checked) .elements {
         transform: perspective(1000px) translateX(calc(130%/5)) rotateY(0deg) scaleX(1);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-one"]:checked) .one~.carousel-element {
         transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg) scaleY(0.7) scaleX(0.7);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-two"]:checked) .elements {
         transform: perspective(1000px) translateX(calc(65%/5)) rotateY(0deg) scaleX(1);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-two"]:checked) .carousel-element:not(.two) {
         transform: perspective(1000px) translateX(calc(65% / 5)) rotateY(45deg) scaleY(0.7) scaleX(0.7);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-two"]:checked) .two~.carousel-element {
         transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg) scaleY(0.7) scaleX(0.7);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-three"]:checked) .elements {
         transform: perspective(1000px) translateX(0px) rotateY(0deg) scaleX(1);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-three"]:checked) .carousel-element:not(.three) {
         transform: perspective(1000px) translateX(calc(65%/5)) rotateY(45deg) scaleY(0.7) scaleX(0.7);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-three"]:checked) .three~.carousel-element {
         transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg) scaleY(0.7) scaleX(0.7);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-four"]:checked) .elements {
         transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(0deg) scaleX(1);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-four"]:checked) .carousel-element:not(.four) {
         transform: perspective(1000px) translateX(calc(65%/5)) rotateY(45deg) scaleY(0.7) scaleX(0.7);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-four"]:checked) .four~.carousel-element {
         transform: perspective(1000px) translateX(calc(-65%/5)) rotateY(-45deg) scaleY(0.7) scaleX(0.7);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-five"]:checked) .elements {
         transform: perspective(1000px) translateX(calc(-130%/5)) rotateY(0deg) scaleX(1);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .carousel-wrapper:has(input[value="slider-five"]:checked) .carousel-element:not(.five) {
         transform: perspective(1000px) translateX(calc(65%/5)) rotateY(45deg) scaleY(0.7) scaleX(0.7);
-        transition: all 1s ease-in-out;
+        transition: all 350ms ease-in-out;
     }
 
     .beach-features ol {
@@ -773,6 +819,8 @@ footer {
     }
 
 }
+
+/* Mark: uo to 480px */
 
 @media screen and (max-width: 480px) {
     main>article {
@@ -796,7 +844,7 @@ footer {
         font-size: clamp(1rem, 0rem + 5vw, 1.5rem);
     }
 
-    share {
+    .share {
         display: flex;
         flex-direction: column;
         align-items: center;

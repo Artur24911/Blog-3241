@@ -16,11 +16,10 @@
 .header {
   height: 120px;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1200px;
   display: flex;
   background-color: rgba(78, 164, 135, 1);
-  padding-left: 120px;
-  align-items: flex-start;
+  justify-content: flex-start;
   gap: 50px;
   align-items: center;
 
@@ -55,8 +54,6 @@
   color: rgba(248, 245, 235, 1);
   text-decoration: none;
   padding: 0px 15px;
-
-
 }
 
 a:visited {
@@ -79,18 +76,48 @@ a:visited {
   display: none;
 }
 
+/* Mark: Main */
+
 main {
   display: flex;
+  gap: 120px;
   flex-direction: column;
   align-items: center;
-  padding: 120px;
+  margin: 0 auto;
+  padding: 88px 0 126px;
+  max-width: 1200px;
 }
 
-.highligts {
+/* Mark: Highlights */
+
+.highlights {
+  height: 100%;
+  width: 100%;
   max-width: 1220px;
+
+  display: flex;
+  gap: clamp(3rem, 1.495rem + 5.006vw, 5.5rem);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.highlights-head {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.highlights-heading {
+  width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   text-align: center;
 }
 
@@ -101,12 +128,12 @@ h2 {
   font-weight: 700;
 }
 
-.highligts div img {
+.highlights-heading img {
   width: 40px;
   height: 40px;
 }
 
-.highligts p {
+.highlights p {
   color: rgba(84, 55, 13, 1);
   font-size: 1.5rem;
   font-family: "Palanquin";
@@ -114,22 +141,15 @@ h2 {
   font-weight: 500;
   line-height: 110%;
   letter-spacing: 0%;
+  padding: 0 40px;
 }
 
-.highligts>div {
+.slider {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: end;
   gap: 20px;
-  text-align: center;
-}
-
-
-.highligts-head {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
   text-align: center;
 }
 
@@ -139,8 +159,6 @@ h2 {
   justify-content: center;
   align-items: end;
   gap: 24px;
-  margin-top: 120px;
-  margin-bottom: 120px;
   max-width: 1220px;
   height: 550px;
   background-color: white;
@@ -182,14 +200,17 @@ h2 {
 
 .slider-wrapper-txt {
   display: flex;
+  gap: 8px;
   flex-direction: column;
   width: 80%;
+  max-width: 880px;
   height: auto;
   text-align: left;
   margin-top: 54px;
   margin-left: 38px;
   padding: 16px 24px;
-  background-color: rgba(255, 255, 255, 0.39);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
   text-decoration: none;
   line-height: 1;
 }
@@ -208,6 +229,7 @@ h2 {
   font-size: 1.75rem;
   letter-spacing: 0%;
   line-height: 110%;
+  padding: 0;
 }
 
 .element-Artur {
@@ -240,14 +262,15 @@ h2 {
   transform: translateX(calc(-100% / 3));
 }
 
-/*FAQ*/
+/* Mark: FAQ-Section */
+
 .faq {
   display: flex;
+  gap: 48px;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 1200px;
-
 }
 
 
@@ -255,10 +278,13 @@ h2 {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding-bottom: 3.5rem;
 }
 
-details {
+.details-all {
+  width: 100%;
+}
+
+.faq details {
   background-color: rgba(241, 201, 83, 1);
   border-radius: 12px;
   padding: 5px 5px;
@@ -269,7 +295,7 @@ details {
 
 }
 
-details>summary {
+.faq details>summary {
   padding: 10px;
 
   border: none;
@@ -286,7 +312,7 @@ details>summary {
 
 }
 
-details>p {
+.faq details>p {
   background-color: white;
 
   border: none;
@@ -299,12 +325,13 @@ details>p {
   font-size: 16px;
 }
 
+/* Mark: Contact-Section */
+
 .contact {
-  /* MARK: weite muss noch angepasst werden, fix? oder 1100 aus figma +clamp? */
   width: 100%;
   max-width: 1100px;
   display: flex;
-  gap: 3.5rem;
+  gap: 56px;
   flex-direction: column;
   align-items: center;
 }
@@ -354,20 +381,19 @@ form {
 .contact-info {
   width: 100%;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+
 }
 
 .contact-details {
+  width: 100%;
   display: flex;
   gap: 1rem;
   flex-direction: column;
 
   border-bottom: solid 1px black;
-}
-
-.contact-info .contact-details {
-  width: 33rem;
 }
 
 form label {
@@ -403,10 +429,10 @@ form label {
 }
 
 .privacy {
-  height: 3.125rem;
+  height: 100%;
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .privacy .checkbox {
@@ -417,6 +443,7 @@ form label {
   cursor: pointer;
   border-radius: 0.2rem;
   border: 2px solid black;
+  flex-shrink: 0;
 }
 
 .privacy .checkbox:hover {
@@ -449,7 +476,8 @@ form label {
 }
 
 .privacy span {
-  display: inline-flex;
+  display: block;
+  text-wrap: wrap;
   gap: 0.5rem;
 }
 
@@ -490,8 +518,10 @@ form label {
   color: rgba(115, 115, 115, 1);
 }
 
+/* Mark: FOOTER */
+
 footer {
-  height: auto;
+  height: 152px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -499,20 +529,20 @@ footer {
 }
 
 .footer-wrapper {
-  display: flex;
+  height: 100%;
   width: 100%;
-  padding: 3.75rem 3.75rem;
 
+  display: flex;
   gap: 10px;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: 1200px;
 }
 
 .footer-left {
   display: flex;
   align-items: center;
-  gap: 4.5rem;
+  gap: clamp(2rem, -1.762rem + 7.828vw, 4.5rem);
 
   font-family: "Palanquin";
   font-weight: 400;
@@ -526,6 +556,7 @@ footer {
 }
 
 .footer-left a {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
@@ -551,25 +582,94 @@ footer {
   width: 44px;
 }
 
-/* @media screen and (min-width: 1280px) {
-.landing-section{
-padding: 0px max(120px, calc(50% - 720px));
-}
-.highligts{
-padding: 0px max(120px, calc(50% - 720px));
-}
-.faq{
-padding: 0px max(120px, calc(50% - 720px));
-}
-.contact{
-padding: 0px max(120px, calc(50% - 720px));
-}
-.footer-content{
-padding: 0px max(120px, calc(50% - 720px));
-}
-} */
 
-@media screen and (min-width: 769px) and (max-width: 1279px) {}
+@media screen and (max-width: 1280px) {
+  main {
+    margin: 0 auto;
+    padding-left: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
+    padding-right: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
+  }
+
+  .header {
+    padding-left: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
+    padding-right: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
+  }
+
+  .footer-wrapper {
+    padding-left: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
+    padding-right: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 80px;
+    padding-bottom: clamp(3.75rem, 0.804rem + 14.732vw, 7.875rem);
+    gap: 80px;
+  }
+
+  .slider-wrapper-txt h3 {
+    font-size: clamp(1.75rem, 0.857rem + 4.464vw, 3rem);
+  }
+
+  .slider-wrapper-txt p {
+    font-size: clamp(1.25rem, 0.893rem + 1.786vw, 1.75rem);
+  }
+
+  .footer-wrapper {
+    align-items: flex-end;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-right img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .footer-right .youtube-img {
+    height: 24px;
+    width: 33px;
+  }
+
+  .icon-bar .links img {
+    height: 34px;
+  }
+
+  .icon-bar {
+    display: flex;
+    height: 100px;
+    width: 100%;
+
+    position: sticky;
+    bottom: 0px;
+    left: 0px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .links {
+    height: 100px;
+    width: 100%;
+    padding: 24px 25px;
+
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(241, 201, 83, 1);
+  }
+}
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .header {
@@ -583,28 +683,16 @@ padding: 0px max(120px, calc(50% - 720px));
     display: none;
   }
 
-  .icon-bar {
-    z-index: 3;
-    display: block;
-    display: flex;
-    width: 100%;
-    background-color: rgba(241, 201, 83, 1);
-    overflow: auto;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    padding: 0px 40px;
-  }
-
-  .icon-bar>img {
-    height: 34px;
+  .highlights {
+    gap: clamp(3rem, 1.495rem + 5.006vw, 5.5rem);
   }
 }
 
 @media screen and (max-width: 480px) {
+  main {
+    gap: 60px;
+  }
+
   .header {
     display: flex;
 
@@ -616,23 +704,35 @@ padding: 0px max(120px, calc(50% - 720px));
     display: none;
   }
 
-  .icon-bar {
-    display: block;
-    display: flex;
+  .highlights {
     width: 100%;
-    background-color: rgba(241, 201, 83, 1);
-    overflow: auto;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    padding: 0px 40px;
+    gap: 32px;
   }
 
-  .icon-bar>img {
-    height: 34px;
+  .highlights-head p {
+    display: none;
   }
 
+  .faq {
+    gap: 32px;
+  }
+
+  .faq details>summary {
+    font-size: clamp(1rem, -0.786rem + 7.619vw, 1.5rem);
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, -0.179rem + 11.429vw, 3.25rem);
+  }
+
+  .contact {
+    gap: 32px;
+  }
+  .contact-header p {
+    display: none;
+  }
+
+  .footer-right {
+    gap: clamp(0.5rem, -0.5rem + 5vw, 1rem);
+  }
 }

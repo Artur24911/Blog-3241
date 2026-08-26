@@ -53,6 +53,7 @@ li {
     flex-direction: column;
     max-width: 900px;
     width: 100%;
+    
 }
 
 .statistik {
@@ -60,6 +61,8 @@ li {
     justify-content: flex-start;
     gap: 32px;
     margin-top: 40px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 
@@ -178,18 +181,22 @@ transform: perspective(250px) rotateY(-20deg) translateX(20px);
 .pro-tipp {
     background-color: rgba(78, 164, 135, 1);
     border-radius: 10px;
-    width: 470px;
+    width: 170;
+    max-width: 170px;
     height: 70px;
-    transform: rotate(-13.67deg);
+    rotate: -13.67deg;
     position: sticky;
-    margin-top: -275px;
     left: 130px;
+    margin-top: -80px; */
     font-family: "Palaquin";
     font-size: 28px;
     font-weight: bold;
     color: rgba(241, 201, 83, 1);
     display: flex;
+    align-self: flex-start;
     align-items: center;
+    transform-origin: top right;
+    flex-wrap: wrap;
 
 }
 
@@ -359,7 +366,9 @@ transform: perspective(250px) rotateY(-20deg) translateX(20px);
             z-index: 1;
             width: 500%;
             height: 100%;
-
+            /* max-width: 500%; */
+           margin-inline: auto;
+            
             position: absolute;
             display: flex;
 
@@ -367,7 +376,7 @@ transform: perspective(250px) rotateY(-20deg) translateX(20px);
             
         }
         .slider-element{
-            width: calc(100% / 3);
+            width: calc(100% / 5);
             height: 100%;
         }
         .slider-element {
@@ -404,28 +413,89 @@ transform: perspective(250px) rotateY(-20deg) translateX(20px);
     }
 }
 
-@media screen and (min-width: 900px) and (max-width:1100px){
-.pro-tipp{
-    width: 622px;
-    margin-top: -304px;
-    left: 130px;
-    }
 
-}
-
-
-@media screen and (min-width: 769px) and (max-width:899px){
-    .pro-tipp{
-        margin-top: -304px;
-    left: 48px;
-    }
-}
 @media screen and (min-width: 769px) and (max-width:1279px) {
-    .text-slider{
-        padding-top: 50px;
-    }
+.headline{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0px 40px;
+    padding-bottom: 40px;
+
+}
+  .main-content{
+    padding: 0px 40px;
+  }
 }
 
-@media screen and (min-width: 481px) and (max-width:768px) {}
+@media screen and (min-width: 481px) and (max-width:768px) {
+   h1{font-size: 40px;
 
-@media screen and (min-width: 0px) and (max-width:480px) {}
+   }
+   h2{font-size: 20px;
+
+   }
+
+   h3{font-size: 16px;
+
+   }
+   
+   p{font-size: 16px;
+
+   }
+
+   li{font-size: 16px;
+
+   }
+   .main-content>h2{
+    font-size: 20px;
+   }
+   
+    .headline{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0px 40px;
+    padding-bottom: 40px;
+}
+.main-content{
+    padding: 0px 40px;
+}
+
+}
+
+@media screen and (min-width: 0px) and (max-width:480px) {
+ h1{font-size: 40px;
+
+   }
+   h2{font-size: 20px;
+
+   }
+
+   h3{font-size: 16px;
+
+   }
+   
+   p{font-size: 16px;
+
+   }
+
+   li{font-size: 16px;
+
+   }
+   .main-content>h2{
+    font-size: 20px;
+   }
+.headline{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0px 40px;
+}
+.main-content{
+    padding: 0px 40px;
+}
+}

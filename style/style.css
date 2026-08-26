@@ -5,55 +5,57 @@
   scroll-behavior: smooth;
 }
 
-.landing-section {
-  background-color: rgba(78, 164, 135, 1);
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-}
+/* Mark: Header */
 
 .header {
-  height: 120px;
   width: 100%;
-  max-width: 1200px;
-  display: flex;
-  background-color: rgba(78, 164, 135, 1);
-  justify-content: flex-start;
-  gap: 50px;
-  align-items: center;
+  height: auto;
 
+  display: flex;
+  justify-content: center;
+
+  background-color: rgba(78, 164, 135, 1);
 }
 
-.header>img {
+.header-bar {
+  height: 7.5rem;
+  width: 100%;
+  max-width: 75rem;
+
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: rgba(78, 164, 135, 1);
+}
+
+.header-bar>img {
   width: 72px;
   padding-right: 60px;
 
 }
 
-.nav-destop {
+.nav-desktop {
   display: flex;
-
-  gap: 30px;
-
+  gap: 1.875rem;
 }
 
 .nav-box {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-
-
 }
 
 .nav-box>a {
-  font-size: 24px;
+  padding: 0px 15px;
+  font-size: 1.5rem;
   font-family: "Arima";
   font-weight: bold;
   color: rgba(248, 245, 235, 1);
   text-decoration: none;
-  padding: 0px 15px;
 }
 
 a:visited {
@@ -64,7 +66,9 @@ a:visited {
   position: absolute;
   bottom: 5px;
   left: 50%;
+
   display: none;
+
   transform: translateX(-50%);
 }
 
@@ -76,16 +80,30 @@ a:visited {
   display: none;
 }
 
-/* Mark: Main */
+/* Mark: Landing-Section */
+
+.landing-section {
+  height: 100vh;
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  background-color: rgba(241, 201, 83, 1);
+}
+
+/* Mark: Main - Kontentbegrenzung */
 
 main {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 5.5rem 0 7.875rem;
+
   display: flex;
-  gap: 120px;
+  gap: 7.5rem;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  padding: 88px 0 126px;
-  max-width: 1200px;
 }
 
 /* Mark: Highlights */
@@ -93,19 +111,21 @@ main {
 .highlights {
   height: 100%;
   width: 100%;
-  max-width: 1220px;
+  max-width: 76.25rem;
 
   display: flex;
   gap: clamp(3rem, 1.495rem + 5.006vw, 5.5rem);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
 }
 
 .highlights-head {
   width: 100%;
-  max-width: 980px;
+  max-width: 61.25;
+
   display: flex;
   gap: 24px;
   flex-direction: column;
@@ -114,18 +134,20 @@ main {
 
 .highlights-heading {
   width: 100%;
+
   display: flex;
+  gap: 0.5rem;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+
   text-align: center;
 }
 
 h2 {
-  color: rgba(78, 164, 135, 1);
   font-size: 3.25rem;
   font-family: "Arima";
   font-weight: 700;
+  color: rgba(78, 164, 135, 1);
 }
 
 .highlights-heading img {
@@ -134,61 +156,58 @@ h2 {
 }
 
 .highlights p {
-  color: rgba(84, 55, 13, 1);
-  font-size: 1.5rem;
+  padding: 0 2.5rem;
+
   font-family: "Palanquin";
   font-style: normal;
   font-weight: 500;
+  font-size: 1.5rem;
+  color: rgba(84, 55, 13, 1);
+
   line-height: 110%;
   letter-spacing: 0%;
-  padding: 0 40px;
 }
 
 .slider {
   width: 100%;
+
   display: flex;
+  gap: 1.5rem;
   justify-content: center;
   align-items: end;
-  gap: 20px;
+
   text-align: center;
 }
 
 .slider {
+  height: 34.375rem;
+  max-width: 76.25rem;
+
   position: relative;
   display: flex;
+  gap: 1.5rem;
   justify-content: center;
   align-items: end;
-  gap: 24px;
-  max-width: 1220px;
-  height: 550px;
+
   background-color: white;
-  border-top-right-radius: 100px;
+  border-top-right-radius: 6.25rem;
   overflow: hidden;
 }
 
 .slider input {
   z-index: 2;
-  margin-bottom: 32px;
-  width: 28px;
-  height: 28px;
+
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-bottom: 2rem;
 }
 
-/* .slider input[type="radio"]{
-  accent-color:  rgba(241, 201, 83, 1);
-
-} */
-
-
-
-/* .slider input:hover {
-  
-} */
-
 .slider-wrapper {
-  display: flex;
-  position: absolute;
   width: 300%;
   height: 100%;
+
+  display: flex;
+  position: absolute;
 
   transition: all 1s ease-in-out;
 }
@@ -199,16 +218,19 @@ h2 {
 }
 
 .slider-wrapper-txt {
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
   width: 80%;
-  max-width: 880px;
+  max-width: 55rem;
   height: auto;
+  margin-top: 3.375rem;
+  margin-left: 2.375rem;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+
   text-align: left;
-  margin-top: 54px;
-  margin-left: 38px;
-  padding: 16px 24px;
+
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   text-decoration: none;
@@ -223,13 +245,15 @@ h2 {
 }
 
 .slider-wrapper-txt p {
-  color: white;
+  padding: 0;
+
   font-family: "Palanquin";
   font-weight: 400;
   font-size: 1.75rem;
+  color: white;
+
   letter-spacing: 0%;
   line-height: 110%;
-  padding: 0;
 }
 
 .element-Artur {
@@ -265,19 +289,20 @@ h2 {
 /* Mark: FAQ-Section */
 
 .faq {
+  width: 100%;
+  max-width: 75rem;
+
   display: flex;
-  gap: 48px;
+  gap: 3rem;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
 }
 
 
 .faq-headline {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .details-all {
@@ -285,53 +310,48 @@ h2 {
 }
 
 .faq details {
-  background-color: rgba(241, 201, 83, 1);
-  border-radius: 12px;
-  padding: 5px 5px;
-  border: none;
   width: 100%;
-  max-width: 1200px;
-  margin-bottom: 16px;
+  max-width: 75rem;
+  padding: 0.3125rem 0.3125rem;
+  margin-bottom: 1rem;
 
+  background-color: rgba(241, 201, 83, 1);
+  border-radius: 0.75rem;
+  border: none;
 }
 
 .faq details>summary {
-  padding: 10px;
-
-  border: none;
+  padding: 0.625rem;
 
   cursor: pointer;
   font-family: "Palanquin";
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: black;
-  font-family: 'palanquin';
-  font-size: 24px;
-  font-weight: 600;
 
-
+  border: none;
 }
 
 .faq details>p {
-  background-color: white;
+  margin: 0.625rem;
+
+  font-family: 'palanquin';
+  font-size: 1rem;
+  color: black;
 
   border: none;
-  margin: 10px;
+  background-color: white;
   box-shadow: 1px 1px 2px #bbbbbb;
-  font-family: "Palanquin";
-  font-size: 16px;
-  color: black;
-  font-family: 'palanquin';
-  font-size: 16px;
 }
 
 /* Mark: Contact-Section */
 
 .contact {
   width: 100%;
-  max-width: 1100px;
+  max-width: 68.75rem;
+
   display: flex;
-  gap: 56px;
+  gap: 3.5rem;
   flex-direction: column;
   align-items: center;
 }
@@ -356,6 +376,7 @@ h2 {
   font-weight: 500;
   font-size: 1.5rem;
   color: rgba(84, 55, 13, 1);
+
   line-height: 110%;
   letter-spacing: 0%;
 }
@@ -382,9 +403,8 @@ form {
   width: 100%;
 
   display: grid;
+  gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-
 }
 
 .contact-details {
@@ -403,7 +423,6 @@ form label {
   line-height: 120%;
 }
 
-/* Mark: Roboto Mono wirklich richtiges Font? */
 .form-input,
 .form-textarea {
   margin-bottom: 1rem;
@@ -430,6 +449,7 @@ form label {
 
 .privacy {
   height: 100%;
+
   display: flex;
   gap: 0.5rem;
   align-items: flex-start;
@@ -533,10 +553,10 @@ footer {
   width: 100%;
 
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 75rem;
 }
 
 .footer-left {
@@ -582,6 +602,7 @@ footer {
   width: 44px;
 }
 
+/* Mark: up to 1280px */
 
 @media screen and (max-width: 1280px) {
   main {
@@ -590,7 +611,7 @@ footer {
     padding-right: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
   }
 
-  .header {
+  .header-bar {
     padding-left: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
     padding-right: clamp(0.5rem, -0.167rem + 3.333vw, 2.5rem);
   }
@@ -601,11 +622,13 @@ footer {
   }
 }
 
+/* Mark: up to 768px */
+
 @media screen and (max-width: 768px) {
   main {
-    padding-top: 80px;
+    padding-top: 5rem;
     padding-bottom: clamp(3.75rem, 0.804rem + 14.732vw, 7.875rem);
-    gap: 80px;
+    gap: 5rem;
   }
 
   .slider-wrapper-txt h3 {
@@ -618,15 +641,15 @@ footer {
 
   .footer-wrapper {
     align-items: flex-end;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
   }
 
   .footer-left {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   .footer-right img {
@@ -645,7 +668,7 @@ footer {
 
   .icon-bar {
     display: flex;
-    height: 100px;
+    height: 6.25rem;
     width: 100%;
 
     position: sticky;
@@ -657,11 +680,11 @@ footer {
   }
 
   .links {
+    z-index: 3;
+
     height: 100px;
     width: 100%;
-    padding: 24px 25px;
-
-    z-index: 3;
+    padding: 1.5rem 1.5625rem;
 
     display: flex;
     align-items: center;
@@ -671,15 +694,17 @@ footer {
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .header {
-    display: flex;
+/* Mark: 481px to 768px */
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header-bar {
+    padding-top: 0.625rem;
+
+    display: flex;
     justify-content: center;
-    padding-top: 10px;
   }
 
-  .nav-destop {
+  .nav-desktop {
     display: none;
   }
 
@@ -688,25 +713,27 @@ footer {
   }
 }
 
+/* Mark: up to 480px */
+
 @media screen and (max-width: 480px) {
   main {
-    gap: 60px;
+    gap: 3.75rem;
   }
 
-  .header {
+  .header-bar {
+    padding-top: 0.625rem;
+
     display: flex;
-
     justify-content: center;
-    padding-top: 10px;
   }
 
-  .nav-destop {
+  .nav-desktop {
     display: none;
   }
 
   .highlights {
     width: 100%;
-    gap: 32px;
+    gap: 2rem;
   }
 
   .highlights-head p {
@@ -714,7 +741,7 @@ footer {
   }
 
   .faq {
-    gap: 32px;
+    gap: 2rem;
   }
 
   .faq details>summary {
@@ -726,8 +753,9 @@ footer {
   }
 
   .contact {
-    gap: 32px;
+    gap: 2rem;
   }
+
   .contact-header p {
     display: none;
   }

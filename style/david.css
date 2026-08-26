@@ -1,3 +1,5 @@
+/* Mark: Global-Settings */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@
 :root{
     --main-font-size: clamp(1rem, 0.793rem + 0.884vw, 1.5rem)
 }
+
 /* Mark: Header */
 
 .header {

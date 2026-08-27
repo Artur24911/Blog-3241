@@ -99,7 +99,10 @@ a:visited {
   background-image: url(../assets/img/hero\ web.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-}
+  }
+  .landing-section>img{
+    display: none;
+  }
 
 
 
@@ -779,16 +782,21 @@ footer {
   }
 
   .landing-section {
-    position: relative;
+    /* position: relative; */
 
-    height: calc(100vh - 220px);
+    height: 0;
     width: 100%;
     margin: 0 auto;
 
-    background-image: url(../assets/img/hero\ mob..png);
+    /* overflow: hidden; */
+    background-image: url(../assets/img/hero\ mob.\ neu.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 136%;
+    
   }
+  
 
   .slider-wrapper-txt h3 {
     font-size: clamp(1.75rem, 0.857rem + 4.464vw, 3rem);

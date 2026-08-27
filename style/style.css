@@ -85,6 +85,22 @@ a:visited {
 .landing-section {
   position: relative;
 
+  height: clamp(18.25rem, -2.021rem + 42.176vw, 35.938rem);
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+
+  background-image: url(../assets/img/hero\ web.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+/* Animation on hold
+.landing-section {
+  position: relative;
+
   height: 35.9375rem;
   width: 100%;
   max-width: 90rem;
@@ -99,20 +115,28 @@ a:visited {
   width: 100%;
 }
 
-.yellow-slider {
+.yellow {
   position: absolute;
-  width: 100%;
+  display: flex;
   height: 100%;
+  max-height: 32.1875rem;
+  width: 200%;
+  display: flex;
+
+}
+
+.yellow-slider {
+  height: 100%/2;
+  max-height: 32.1875rem;
+  width: 100%;
+
   background-color: rgba(241, 201, 83, 1);
 
-  animation: yellow-slider;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
+  /* Name | Dauer | Verlauf | Verzögerung | Endverhalten 
+  animation: yellow-slider 6s ease-in forwards;
 }
 
 .yellow-part {
-  position: absolute;
-  top: 0;
   width: 40.4375rem;
   height: 3.1338rem;
 }
@@ -125,6 +149,8 @@ a:visited {
 
   width: 21.5625rem;
   height: 14.1875rem;
+
+  animation: heading-text 3s ease-in forwards;
 }
 
 .heading-text h2 {
@@ -143,6 +169,8 @@ a:visited {
   color: rgba(84, 55, 13, 1);
 
   line-height: 110%;
+
+  animation: heading-text-p 4s;
 }
 
 .circle {
@@ -170,7 +198,7 @@ a:visited {
   bottom: 3.75rem;
   left: 3.5938rem;
 }
-
+*/
 
 
 /* Mark: Main - Kontentbegrenzung */
@@ -411,11 +439,12 @@ h2 {
 
   border: none;
 
- display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 }
+
 summary::-webkit-details-marker {
   display: none;
 }
@@ -428,6 +457,7 @@ summary::after {
 details[open] summary::after {
   transform: rotate(180deg);
 }
+
 .faq details>p {
   margin: 0.625rem;
 
@@ -726,6 +756,20 @@ footer {
     padding-bottom: clamp(3.75rem, 0.804rem + 14.732vw, 7.875rem);
     gap: 5rem;
   }
+
+ .landing-section {
+  position: relative;
+
+  height: clamp(31.25rem, 8.929rem + 111.607vw, 62.5rem);
+  width: 100%;
+  margin: 0 auto;
+
+  background-image: url(../assets/img/hero\ mob..jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 
   .slider-wrapper-txt h3 {
     font-size: clamp(1.75rem, 0.857rem + 4.464vw, 3rem);

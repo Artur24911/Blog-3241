@@ -71,7 +71,7 @@ a:visited {
 
 .nav-box>img {
     position: absolute;
-    bottom: 5px;
+    bottom: -5px;
     left: 50%;
 
     display: none;

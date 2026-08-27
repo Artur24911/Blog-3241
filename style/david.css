@@ -525,6 +525,10 @@ ol {
     cursor: pointer;
 }
 
+.share-button input:checked ~img {
+    display: none;
+}
+
 .share-button-all:has(input:checked) .button-extra {
     display: flex;
 }
@@ -865,6 +869,7 @@ footer {
     }
 
     .icon-bar {
+        z-index: 4;
         display: flex;
         height: 6.25rem;
         width: 100%;

@@ -454,9 +454,9 @@ height: 25px;
     transition: all 250ms ease-in-out;
 }
 /* .slider-element:hover { */
-    z-index: 0;
-    width: 500%;
-    transform: perspective(0px) rotateY(0deg) translateX(0px) scaleX(1) scaleY(1);
+    /* z-index: 0; */
+    /* width: 500%; */
+    /* transform: perspective(0px) rotateY(0deg) translateX(0px) scaleX(1) scaleY(1); */
 }
 
 

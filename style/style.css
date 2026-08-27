@@ -404,7 +404,7 @@ form {
 
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
 .contact-details {
@@ -425,7 +425,7 @@ form label {
 
 .form-input,
 .form-textarea {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   border: none;
 
   font-family: "Roboto Mono";
@@ -667,6 +667,7 @@ footer {
   }
 
   .icon-bar {
+    z-index: 4;
     display: flex;
     height: 6.25rem;
     width: 100%;

@@ -457,7 +457,7 @@ height: 25px;
     /* z-index: 0; */
     /* width: 500%; */
     /* transform: perspective(0px) rotateY(0deg) translateX(0px) scaleX(1) scaleY(1); */
-}
+/* } */
 
 
     .slider-res input[value="one"]:checked~.slider{

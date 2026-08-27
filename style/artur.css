@@ -242,37 +242,49 @@ font-family: "Palaquin";
 .share-text {
     display: flex;
     align-items: center;
-    padding-top: 100px;
-    max-width: 450px;
+    /* padding-top: 100px; */
+    max-width: 30.75rem;
     width: 100%;
-    max-height: 160px;
-    height: 100%;
+    /* max-height: 160px; */
+    height: 9.625rem;
     flex-direction: column;
+    justify-content: end;
+    position: relative;
+}
+.share-text>p{
+    position: absolute;
+    text-align: center;
+    bottom: 80px;
 }
 
-.share-link>img {
-    display: flex;
-    align-items: center;
-    position: relative;
-    right: 190px;
-    bottom: 10px;
+.share-text>img {
+    /* display: flex; */
+    /* align-items: center; */
+    position: absolute;
+    /* right: 190px; */
+    /* bottom: 10px; */
+    align-self: flex-start;
+    height: 100px;
+    width: clamp(4.375rem, 0.018rem + 14.493vw, 5rem);
+    border: 3px;
 }
 
 .bottum {
     display: flex;
-    background-color: rgba(78, 164, 135, 1);
-    border-radius: 40px;
-    font-family: "Arima";
-    font-size: 24px;
-    font-weight: 700;
-    color: rgba(241, 201, 83, 1);
-    gap: 20px;
-    width: 150px;
-    height: 50px;
+    /* background-color: rgba(78, 164, 135, 1); */
+    /* border-radius: 40px; */
+    /* font-family: "Arima"; */
+    /* font-size: 24px; */
+    /* font-weight: 700; */
+    /* color: rgba(241, 201, 83, 1); */
+    /* gap: 20px; */
+    /* width: 150px; */
+    /* height: 3.125rem; */
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 40px;
+    /* bottom: 2.5rem; */
+    top: 15px;
 
 
 }
@@ -290,7 +302,18 @@ font-family: "Palaquin";
 .bottum-1 {
     display: flex;
 
+    gap: 1.25rem;
+      background-color: rgba(78, 164, 135, 1);
+    border-radius: 40px;
+    width: 150px;
+    height: 3.125rem;
+    font-family: "Arima";
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(241, 201, 83, 1);
     gap: 20px;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -305,9 +328,12 @@ font-family: "Palaquin";
     /* font-weight: 700; */
     /* color: rgba(241, 201, 83, 1); */
     /* gap: 20px;  */
-
-
-
+}
+.bottum-trans-link>a{
+    font-family: "Palaquin";
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(78, 164, 135, 1);
 }
 
 .bottum-1:hover {
@@ -316,8 +342,13 @@ font-family: "Palaquin";
 
 .bottum-trans-share {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
+    padding-left: 5px;
+    align-items: center;
 
+}
+.bottum-trans-share>img{
+height: 25px;
 }
 
 
@@ -325,12 +356,21 @@ font-family: "Palaquin";
 
 .bottum-trans-link {
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
     flex-direction: column;
 }
 
 .bottum:has(input:checked) .bottum-trans {
     display: flex;
+    
+
+}
+.bottum:has(input:checked)  .bottum-1>img{
+    display: none;
+    
+}
+.bottum:has(input:checked)  .bottum-1{
+    width: 100px;
 }
 
 @media screen and (min-width: 0px) and (max-width:1279px) {
@@ -341,14 +381,14 @@ font-family: "Palaquin";
             position: relative;
             /* background-color: black; */
             width: 100%;
-            height: 450px;
+            height: 28.125rem;
 
 
             display: flex;
             justify-content: center;
             align-items: flex-end;
             overflow: hidden;
-           gap: 10px;
+           gap: 0.625rem;
 
         }
 
@@ -362,18 +402,18 @@ font-family: "Palaquin";
             input[type="radio"]{
                 background-color: rgba(78, 164, 135, 0.3);
                 appearance: none;
-                width: 22px;
+                width: 1.375rem;
                 border-radius: 50%;
                 transition: all 0.5s ease;
-                margin-bottom: 30px;
+                margin-bottom: 1.875rem;
                 
             }
            
             input[type="radio"]:checked{
                 border-color: rgba(78, 164, 135, 1);
                 background-color: rgba(78, 164, 135, 1);
-                width: 40px;
-                height: 22px;
+                width: 2.5rem;
+                height: 1.375rem;
                 border-radius: 40%;
                 transition: all 0.5s ease;
                 transform: scale(1);
@@ -481,6 +521,9 @@ font-family: "Palaquin";
     padding: 0px 40px;
     padding-bottom: 40px;
 }
+.statistik{
+    gap: 8px;
+}
 .main-content{
     padding: 0px 40px;
 }
@@ -494,6 +537,10 @@ font-family: "Palaquin";
     height: 60px;
     right: 40px;
     bottom: 70px;
+}
+.share-text>img{
+    height: 60px;
+    width: 50px;
 }
 }
 @media screen and (min-width: 0px) and (max-width:480px) {
@@ -525,6 +572,9 @@ font-family: "Palaquin";
     gap: 40px;
     padding: 0px 40px;
 }
+.statistik{
+    gap: 8px;
+}
 .main-content{
     padding: 0px 40px;
 }
@@ -552,5 +602,9 @@ font-family: "Palaquin";
 
 .share-text{
     padding-top: 30px;
+}
+.share-text>img{
+    height: 60px;
+    width: 50px;
 }
 }

@@ -442,6 +442,7 @@ ol {
     font-weight: 500;
     font-size: 1.5rem;
     color: rgba(84, 55, 13, 1);
+    bottom: 80px;
 }
 
 .share>img {

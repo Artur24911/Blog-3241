@@ -83,15 +83,84 @@ a:visited {
 /* Mark: Landing-Section */
 
 .landing-section {
-  height: 100vh;
+  position: relative;
+
+  height: 35.9375rem;
   width: 100%;
   max-width: 90rem;
   margin: 0 auto;
 
   overflow: hidden;
-
-  background-color: rgba(241, 201, 83, 1);
 }
+
+.landing-photo {
+  height: 100%;
+  max-height: 32.1875rem;
+  width: 100%;
+}
+
+.yellow-part {
+  position: absolute;
+  top: 0;
+  width: 40.4375rem;
+  height: 3.1338rem;
+}
+
+.heading-text {
+  z-index: 4;
+  position: absolute;
+  top: 8.9375rem;
+  left: 6.5rem;
+
+  width: 21.5625rem;
+  height: 14.1875rem;
+}
+
+.heading-text h2 {
+  font-family: "Arima";
+  font-weight: 700;
+  font-size: 3.75rem;
+  color: rgba(84, 55, 13, 1);
+
+  line-height: 120%;
+}
+
+.heading-text p {
+  font-family: "Palanquin";
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: rgba(84, 55, 13, 1);
+
+  line-height: 110%;
+}
+
+.circle {
+  z-index: 1;
+  position: relative;
+  position: absolute;
+  top: 17.75rem;
+  left: 27.75rem;
+
+  width: 10rem;
+  height: 10rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  z-index: 2;
+  position: absolute;
+}
+
+.img-turkey {
+  z-index: 3;
+  bottom: 3.75rem;
+  left: 3.5938rem;
+}
+
+
 
 /* Mark: Main - Kontentbegrenzung */
 

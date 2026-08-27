@@ -5,6 +5,12 @@
   scroll-behavior: smooth;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Mark: Header */
 
 .header {
@@ -204,6 +210,7 @@ a:visited {
 /* Mark: Main - Kontentbegrenzung */
 
 main {
+  flex: 1;
   max-width: 75rem;
   margin: 0 auto;
   padding: 5.5rem 0 7.875rem;
@@ -217,7 +224,6 @@ main {
 /* Mark: Highlights */
 
 .highlights {
-  height: 100%;
   width: 100%;
   max-width: 76.25rem;
 
@@ -323,6 +329,8 @@ h2 {
 .slider-element {
   width: calc(100% / 3);
   height: 100%;
+  cursor: pointer;
+  position: relative;
 }
 
 .slider-wrapper-txt {
@@ -334,22 +342,23 @@ h2 {
   padding: 1rem 1.5rem;
 
   display: flex;
-  gap: 0.5rem;
   flex-direction: column;
 
   text-align: left;
 
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
+
   text-decoration: none;
   line-height: 1;
 }
 
 .slider-wrapper-txt h3 {
+  padding-bottom: 8px;
   color: white;
   font-family: "Palanquin Dark";
   font-weight: 600;
   font-size: 3rem;
+  backdrop-filter: blur(20px);
 }
 
 .slider-wrapper-txt p {
@@ -362,16 +371,28 @@ h2 {
 
   letter-spacing: 0%;
   line-height: 110%;
+  backdrop-filter: blur(10px);
 }
 
-.element-Artur {
-  background: url(../assets/img/header\ photo\ \(1\).webp);
-  background-size: cover;
-  background-repeat: no-repeat;
+.slider-element a::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }
 
 .element-David {
   background: url(../assets/img/header\ photo\ \(2\).webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.element-Artur {
+  background: url(../assets/img/header\ photo\ \(1\).webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -757,19 +778,17 @@ footer {
     gap: 5rem;
   }
 
- .landing-section {
-  position: relative;
+  .landing-section {
+    position: relative;
 
-  height: clamp(31.25rem, 8.929rem + 111.607vw, 62.5rem);
-  width: 100%;
-  margin: 0 auto;
+    height: calc(100vh - 220px);
+    width: 100%;
+    margin: 0 auto;
 
-  background-image: url(../assets/img/hero\ mob..jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-
+    background-image: url(../assets/img/hero\ mob..png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   .slider-wrapper-txt h3 {
     font-size: clamp(1.75rem, 0.857rem + 4.464vw, 3rem);
